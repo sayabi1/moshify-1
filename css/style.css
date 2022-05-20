@@ -465,16 +465,18 @@ a {
 
 .testimonial {
   padding: 3rem;
+}
+.testimonial__image {
   position: relative;
 }
 
-.testimonial__image {
+.testimonial__image > img {
   width: 100%;
 }
 .testimonial__image > .icon-container {
   position: absolute;
   top: 3rem;
-  right: 760px;
+  right: -32px;
 }
 
 @media screen and (min-width: 768px) {
@@ -723,6 +725,7 @@ a {
 
 .feature {
   gap: 4rem 2rem;
+  margin: 12rem 0;
 }
 .feature__heading {
   margin: 1rem 0;
@@ -732,11 +735,13 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .feature :nth-of-type(even) .feature__content {
+  .feature:last-of-type .feature__content {
+    order: 2;
+  }
+  .feature:nth-of-type(2) .feature__content {
     order: 2;
   }
 }
-
 /* showcase */
 
 .block-showcase__image {
